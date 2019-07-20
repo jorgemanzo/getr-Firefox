@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Getr",
+  "version": "-1.0",
+
+  "description": "Extension for a very specific website",
+  "icons": {
+  	"48": "icons/beasts-48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "Get It!",
+    "default_popup": "popup/menu.html"
+  }
+}
