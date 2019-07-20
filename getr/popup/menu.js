@@ -1,23 +1,37 @@
 const clickCallback = async (event) => {
 	console.log("In Background Script: ", event.target)
-	let sendEvent = (tabs) => {
+	let sendEvent = (tabs, clickedButton) => {
 		browser.tabs.sendMessage(tabs[0].id, {
-			"command": "download"
+			"clickedButton": clickedButton
 		})	
 	}
+	let tab = await browser.tabs.query({active: true, currentWindow: true})
 	if(event.target.classList.contains("download")) {
-		let tab = await browser.tabs.query({active: true, currentWindow: true})
-		sendEvent(tab)
+		sendEvent(tab, "download")
+	} else if(event.target.classList.contains("telegram")) {
+		sendEvent(tab, "telegram")
 	}
+}
+
+const telegramMessegeBuilder = (directImgUrl, srcUrl) => {
+	const base = "https://telegram.me/share/url?url="
+	const textBase = "&text="
+	const sourceText = "Source:%20"
+	const final = base + directImgUrl + textBase + sourceText + srcUrl
+	return final
 }
 
 const contentScriptMessageHandler = async (m) => {
 	console.log("In BG Script, message from Content script: ", m)
-	const download = await browser.downloads.download({
-		url: m.imgUrl,
-		saveAs: true,
-		filename: m.fileName
-	})
+	if(m.clickedButton === "download") {
+		const download = await browser.downloads.download({
+			url: m.imgUrl,
+			saveAs: true,
+			filename: m.fileName
+		})
+	} else if(m.clickedButton === "telegram") {
+		window.location.href = telegramMessegeBuilder(m.imgUrl, m.source)
+	}
 }
 
 browser.tabs.executeScript({file: "/content_scripts/content_script.js"})
