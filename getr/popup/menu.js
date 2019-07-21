@@ -12,11 +12,11 @@ const clickCallback = async (event) => {
 		sendEvent(tab, "telegram")
 	}
 }
-
+//tg://msg_url?url=&text=Source
 const telegramMessegeBuilder = (directImgUrl, srcUrl) => {
-	const base = "https://telegram.me/share/url?url="
+	const base = "tg://msg_url?url="
 	const textBase = "&text="
-	const sourceText = "Source:%20"
+	const sourceText = "%0A%0ASource:%20"
 	const final = base + directImgUrl + textBase + sourceText + srcUrl
 	return final
 }

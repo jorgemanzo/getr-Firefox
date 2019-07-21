@@ -1,7 +1,7 @@
 html, body {
   width: 250px;
-  font-family: Helvetica;
-  background-color: white;
+  font-family: Veranda, sans-serif;
+  background-color: rgb(50,50,50);
 }
 
 a {
@@ -17,8 +17,9 @@ a {
 .item {
   text-align: center;
   margin: 10px;
-  font-size: 18pt;
-  color: black;
+  font-size: 30pt;
+  font-weight: bold;
+  color: white;
 }
 
 .download:hover {
@@ -29,7 +30,7 @@ a {
 }
 
 .telegram:hover {
-  background: linear-gradient(to right,#00ff9b,#1b3bda);
+  background: linear-gradient(-90deg,#00ff9b,#1b3bda);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
