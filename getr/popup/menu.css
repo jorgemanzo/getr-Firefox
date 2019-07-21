@@ -1,24 +1,36 @@
 html, body {
-  width: 150px;
-  font-family: Arial;
+  width: 250px;
+  font-family: Helvetica;
+  background-color: white;
 }
 
-.hidden {
-  display: none;
+a {
+  text-decoration: none;
 }
 
-.button {
-  margin: 3% auto;
-  padding: 4px;
-  text-align: center;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.item:hover {
-  background-color: #CFF2F2;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .item {
-  background-color: #E5F2F2;
+  text-align: center;
+  margin: 10px;
+  font-size: 18pt;
+  color: black;
+}
+
+.download:hover {
+  background: linear-gradient(-90deg, red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.telegram:hover {
+  background: linear-gradient(to right,#00ff9b,#1b3bda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
 }
