@@ -1,6 +1,6 @@
 html, body {
-  width: 250px;
-  font-family: Veranda, sans-serif;
+  width: 150px;
+  font-family: Helvetica, sans-serif;
   background-color: rgb(50,50,50);
 }
 
@@ -17,7 +17,7 @@ a {
 .item {
   text-align: center;
   margin: 10px;
-  font-size: 30pt;
+  font-size: 18pt;
   font-weight: bold;
   color: white;
 }

@@ -1,5 +1,4 @@
 const clickCallback = async (event) => {
-	console.log("In Background Script: ", event.target)
 	let sendEvent = (tabs, clickedButton) => {
 		browser.tabs.sendMessage(tabs[0].id, {
 			"clickedButton": clickedButton
@@ -22,7 +21,6 @@ const telegramMessegeBuilder = (directImgUrl, srcUrl) => {
 }
 
 const contentScriptMessageHandler = async (m) => {
-	console.log("In BG Script, message from Content script: ", m)
 	if(m.clickedButton === "download") {
 		const download = await browser.downloads.download({
 			url: m.imgUrl,
