@@ -1,0 +1,22 @@
+{
+  "name": "parcel-gtr-firefox",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "engines": {
+    "browsers": [
+      "last 1 firefox versions"
+    ]
+  },
+  "author": "",
+  "keywords": [],
+  "main": "index.html",
+  "scripts": {
+    "build": "parcel build --out-dir getr/popup --out-file menu.html getr/index.html",
+    "start": "parcel --out-dir getr/popup --out-file menu.html getr/index.html --public-url .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
+}

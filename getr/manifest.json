@@ -1,18 +1,19 @@
 {
   "manifest_version": 2,
-  "name": "Getr",
+  "name": "Getr-Parcel",
   "version": "-1.0",
 
   "description": "Extension for a very specific website",
   "icons": {
-  	"48": "icons/beasts-48.png"
+  	"16": "icons/icon-16.svg"
   },
   "permissions": [
     "activeTab",
-    "downloads"
+    "downloads",
+    "storage"
   ],
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
+    "default_icon": "icons/icon-16.svg",
     "default_title": "Get It!",
     "default_popup": "popup/menu.html"
   }

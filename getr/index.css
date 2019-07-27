@@ -1,7 +1,7 @@
 html, body {
   width: 180px;
   font-family: Helvetica, sans-serif;
-  background-color: rgb(50,50,50);
+  background-color: rgba(50,50,50);
 }
 
 a {
@@ -31,6 +31,13 @@ a {
 
 .telegram:hover {
   background: linear-gradient(-90deg,#00ff9b,#1b3bda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.settings:hover {
+  background: linear-gradient(90deg,#404040,#a0a0a0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;
