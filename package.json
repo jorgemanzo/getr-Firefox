@@ -12,11 +12,14 @@
   "keywords": [],
   "main": "index.html",
   "scripts": {
-    "build": "parcel build --out-dir getr/popup --out-file menu.html getr/index.html",
+    "build": "parcel build --out-dir getr/popup --out-file menu.html getr/index.html --public-url .",
     "start": "parcel --out-dir getr/popup --out-file menu.html getr/index.html --public-url .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "cssnano": "^4.1.10"
+  },
+  "dependencies": {
+    "parcel": "^1.12.4"
   }
 }
